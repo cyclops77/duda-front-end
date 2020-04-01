@@ -861,6 +861,8 @@ body .solid-button-one:hover,.navbar .navbar-toggler,.faq-tab-wrapper .faq-panel
   background: #FF424C;
   transition: width 0.3s ease-out;
 }
+/* @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap'); */
+
 .theme-menu-one.d-align-item .header-right-widget .call-us a {color: #bebebe; margin-left: 0;}
 .theme-menu-one.d-align-item .header-right-widget .call-us a:hover {color: #f569f8;}
 .theme-menu-one.d-align-item .navbar-nav .nav-item .nav-link:hover:before,
@@ -873,6 +875,7 @@ body .solid-button-one:hover,.navbar .navbar-toggler,.faq-tab-wrapper .faq-panel
   line-height: 50px;
   background: white;
   border-radius: 3px;
+  font-family: 'Work Sans', sans-serif;
   font-size: 18px;
   color: #FF424C;
   text-align: center;
@@ -11426,6 +11429,7 @@ footer.top-border {border-top:1px solid rgba(0,0,0,0.06);}
   left: -20%;
   top: -80%; 
 }
+
 .banner-large-text .title span:before {
   content: '';
   position: absolute;

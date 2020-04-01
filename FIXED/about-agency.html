@@ -19,21 +19,26 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 		<title>Rogan - Business and Agency html Template</title>
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
+		<link rel="icon" type="image/png" sizes="56x56" href="../Rogan/rogan-b/html/images/fav-icon/icon.png">
 		<!-- Main style sheet -->
-		<link rel="stylesheet" type="text/css" href="../../rogan-b/html/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../Rogan/rogan-b/html/css/style.css">
 		<!-- responsive style sheet -->
-		<link rel="stylesheet" type="text/css" href="../../rogan-b/html/css/responsive.css">
-		<link rel="stylesheet" type="text/css" href="../../rogan-c/html/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../Rogan/rogan-b/html/css/responsive.css">
+		<link rel="stylesheet" type="text/css" href="../Rogan/rogan-c/html/css/style.css">
 		<!-- responsive style sheet -->
-		<link rel="stylesheet" type="text/css" href="../../rogan-c/html/css/responsive.css">
+		<link rel="stylesheet" type="text/css" href="../Rogan/rogan-c/html/css/responsive.css">
+		<!-- <link rel="stylesheet" href="../Agile/assets/css/i-con.css" type="text/css" /> -->
 
-		<!-- Fix Internet Explorer ______________________________________-->
-		<!--[if lt IE 9]>
-			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="vendor/html5shiv.js"></script>
-			<script src="vendor/respond.js"></script>
-		<![endif]-->	
+
+		<!-- ONLY NOTIFIER -->
+
+		<link rel="stylesheet" href="../Agile/assets/css/i-con.css" type="text/css" />
+
+		<link rel="stylesheet" href="../Agile/assets/css/theme.css" type="text/css" />
+
+		<!-- END NOTIFIER -->
+
+
 	</head>
 
 	<body>
@@ -47,7 +52,7 @@
 				<div id="preloader">
 					<div id="ctn-preloader" class="ctn-preloader">
 						<div class="animation-preloader">
-							<div class="icon"><img src="images/1.svg" alt=""></div>
+							<div class="icon"><img src="../Rogan/rogan-b/html/images/1.svg" alt=""></div>
 							<div class="txt-loading">
 								<span data-text-preloader="R" class="letters-loading">
 									R
@@ -76,28 +81,57 @@
 				Theme Main Menu
 			============================================== 
 			-->
+			<!-- ASIDE -->
+			<!-- ASIDE -->
+			<!-- ASIDE -->
+			<!-- ASIDE -->
+			 <!-- right -->
+			 <div class="modal fade" id="user" data-backdrop="true" aria-hidden="true">
+				<div class="modal-dialog modal-right w-xl bg-white b-l">
+				  <div class="d-flex flex-column" id="chat-list" data-plugin="chat">
+					<div class="navbar white lt box-shadow d-flex">
+						<span class="text-md text-ellipsis col-md-10">
+							<!-- Chat -->
+						</span>
+						<a data-dismiss="modal" class="col-md-2 float-right">
+						  <span class="text-md l-h-1x">&times;</span>
+						</a>
+					</div>
+					<ul class="navbar-nav mr-auto ul-custom">
+					  <li class="nav-item"><a href="index-sass.html" class="nav-link-custom" href="#home">Home</a></li>
+					  <li class="nav-item"><a href="about-agency.html" class="nav-link-custom" href="#home">About Us</a></li>
+					  <li class="nav-item"><a href="service-v3.html" class="nav-link-custom" href="#home">Services</a></li>
+					  <li class="nav-item"><a  class="nav-link-custom" href="#home">News</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			<!-- ASIDE -->
+			<!-- ASIDE -->
+			<!-- ASIDE -->
+			<!-- ASIDE -->
 			<div class="theme-main-menu theme-menu-one d-align-item">
 				<div class="logo">
-					<a href="index.html">
-						<img src="images/logo/rsz_duda.png" alt="" style="height: 50px;">
+					<a href="index-sass.html.html">
+						<img src="../rsz_duda.png" alt="" style="height: 50px;">
 					</a>
 				</div>
 				<nav id="mega-menu-holder" class="navbar navbar-expand-lg">
 					<div  class="ml-auto nav-container">
 						<button style="margin-right: 10px;"
-						 class="navbar-toggler navbar-toggler-right custom-padding-nav" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						 class="navbar-toggler navbar-toggler-right custom-padding-nav" type="button"  data-toggle="modal" data-target="#user" data-toggle-class="modal-open-aside" data-target="body">
 					        <i class="flaticon-setup"></i>
 						</button>
-						<a style="margin-right: 10px;" class="navbar-toggler navbar-toggler-right custom-padding-nav">
-							<i class="flaticon-play-button"></i>
+						<a style="margin-right: 15px;" class="navbar-toggler navbar-toggler-right custom-padding-nav">
+							<i class="i-con i-con-bell"><i></i></i>
 						</a>
 					   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					   		<ul class="navbar-nav">
 							    <li class="nav-item">
-							    	<a href="" class="nav-link" data-toggle="dropdown">Home</a>
+							    	<a href="index-sass.html" class="nav-link">Home</a>
 							    </li>
 							    <li class="nav-item">
-						            <a class="nav-link" href="../../rogan-b/html/about-agency.html">About us</a>
+						            <a class="nav-link" href="about-agency.html">About us</a>
 						        </li>
 						        <li class="nav-item dropdown">
 							    	<a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Services</a>
@@ -106,26 +140,26 @@
 								            <div class="clearfix">
 								              	<div class="row">
 									                <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mb-3 mt-lg-3 mb-lg-3">
-									                	<a href="index.html" class="img-box">
-									                		<span class="img"><img src="images/menu-img/home-1.jpg" alt=""></span>
+									                	<a href="service-v3.html" class="img-box">
+									                		<span class="img"><img src="../Rogan/rogan-c/html/images/menu-img/home-1.jpg" alt=""></span>
 									                		<span class="text">Business Agency</span>
 									                	</a>
 									                </div>
 									                <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mb-3 mt-lg-3 mb-lg-3">
-									                	<a href="index-seo.html" class="img-box">
-									                		<span class="img"><img src="images/menu-img/home-2.jpg" alt=""></span>
+									                	<a href="service-v3.html" class="img-box">
+									                		<span class="img"><img src="../Rogan/rogan-c/html/images/menu-img/home-2.jpg" alt=""></span>
 									                		<span class="text">Creative Agency 3</span>
 									                	</a>
 									                </div>
 									                <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mb-3 mt-lg-3 mb-lg-3">
-									                	<a href="index-portfolio.html" class="img-box">
-									                		<span class="img"><img src="images/menu-img/home-5.jpg" alt=""></span>
+									                	<a href="service-v3.html" class="img-box">
+									                		<span class="img"><img src="../Rogan/rogan-c/html/images/menu-img/home-5.jpg" alt=""></span>
 									                		<span class="text">Business Agency 2</span>
 									                	</a>
 									                </div>
 									                <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mb-3 mt-lg-3 mb-lg-3">
-									                	<a href="index-portfolio-pr.html" class="img-box">
-									                		<span class="img"><img src="images/menu-img/home-8.jpg" alt=""></span>
+									                	<a href="service-v3.html" class="img-box">
+									                		<span class="img"><img src="../Rogan/rogan-c/html/images/menu-img/home-8.jpg" alt=""></span>
 									                		<span class="text">Coming Soon</span>
 									                	</a>
 									                </div>
@@ -141,10 +175,110 @@
 								
 								<!-- <i class="flaticon-play-button"></i> -->
 								<li class="nav-item">
-									<a class="nav-link">
-										<i class="flaticon-play-button"></i>
+									<a class="px-2 i-con-h-a mr-lg-2" data-toggle="dropdown">
+									  <i class="i-con i-con-bell"><i></i></i>
+									  <!-- <span class="badge badge-pill badge-up bg-primary text-white">9</span> -->
 									</a>
-								</li>
+									<!-- dropdown -->
+									<div class="dropdown-menu dropdown-menu-right mt-3 w-md animate fadeIn p-0">
+										<div class="scrollable hover" style="max-height: 250px">
+										  <div class="list list-row animates animates-fadeInUp">
+											  <div class="list-item " data-id="9">
+												<div>
+												<a href="#">
+												  <span class="w-32 avatar circle bg-info-lt" >
+														<img src="../Agile/assets/img/a9.jpg" alt=".">
+												  </span>
+												</a>
+												</div>
+												<div class="flex">
+													<div class="item-feed h-2x">
+													  Added to <a href='#'>GameTime</a> team
+													</div>
+												</div>
+											  </div>
+											  <div class="list-item " data-id="12">
+												<div>
+												<a href="#">
+												  <span class="w-32 avatar circle bg-info-lt" >
+														D
+												  </span>
+												</a>
+												</div>
+												<div class="flex">
+													<div class="item-feed h-2x">
+													  <a href='#'>Mike</a> upload last week lessons summary
+													</div>
+												</div>
+											  </div>
+											  <div class="list-item " data-id="8">
+												<div>
+												<a href="#">
+												  <span class="w-32 avatar circle bg-success-lt" >
+														<img src="../Agile/assets/img/a8.jpg" alt=".">
+												  </span>
+												</a>
+												</div>
+												<div class="flex">
+													<div class="item-feed h-2x">
+													  Mike Added you to <a href='#'>repo</a>
+													</div>
+												</div>
+											  </div>
+											  <div class="list-item " data-id="2">
+												<div>
+												<a href="#">
+												  <span class="w-32 avatar circle bg-primary-lt" >
+														<img src="../Agile/assets/img/a2.jpg" alt=".">
+												  </span>
+												</a>
+												</div>
+												<div class="flex">
+													<div class="item-feed h-2x">
+													  What's the project progress now
+													</div>
+												</div>
+											  </div>
+											  <div class="list-item " data-id="15">
+												<div>
+												<a href="#">
+												  <span class="w-32 avatar circle bg-success-lt" >
+														G
+												  </span>
+												</a>
+												</div>
+										  
+												<div class="flex">
+													<div class="item-feed h-2x">
+													  We attempted to charge your <a href='#'>Pro plan</a>
+													</div>
+												</div>
+											  </div>
+											  <div class="list-item " data-id="6">
+												<div>
+												<a href="#">
+												  <span class="w-32 avatar circle bg-danger-lt" >
+														<img src="../Agile/assets/img/a6.jpg" alt=".">
+												  </span>
+												</a>
+												</div>
+												<div class="flex">
+													<div class="item-feed h-2x">
+													  Homepage mockup design
+													</div>
+												</div>
+											  </div>
+										  </div>
+										</div>
+										<div class="d-flex px-3 py-2 b-t">
+										  <div class="flex">
+											<span>6 Notifications</span>
+										  </div>
+										  <a href="setting.html">See all <i class="fa fa-angle-right text-muted"></i></a>
+										</div>
+									</div>
+									<!-- / dropdown -->
+								  </li>
 						        <li class="login-button"><a href="">Contact Us</a></li>
 						   </ul>
 					   </div>
@@ -164,14 +298,14 @@
 			-->
 			<div class="banner-large-text pb-350 pos-r md-pt-200 md-pb-150">
 				<div class="shape-wrapper">
-					<img src="images/shape/13.svg" alt="" class="shape-two img-shape">
-					<img src="images/shape/5.svg" alt="" class="shape-three img-shape">
-					<img src="images/shape/4.svg" alt="" class="shape-four img-shape">
-					<img src="images/shape/47.svg" alt="" class="shape-five img-shape">
-					<img src="images/shape/4.svg" alt="" class="shape-six img-shape">
-					<img src="images/shape/48.svg" alt="" class="shape-seven img-shape">
-					<img src="images/shape/9.svg" alt="" class="shape-eight img-shape">
-					<img src="images/shape/49.svg" alt="" class="shape-nine img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/13.svg" alt="" class="shape-two img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/5.svg" alt="" class="shape-three img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/4.svg" alt="" class="shape-four img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/47.svg" alt="" class="shape-five img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/4.svg" alt="" class="shape-six img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/48.svg" alt="" class="shape-seven img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/9.svg" alt="" class="shape-eight img-shape">
+					<img src="../Rogan/rogan-b/html/images/shape/49.svg" alt="" class="shape-nine img-shape">
 				</div>
 				<div class="container">
 					<div class="inner-wrapper">
@@ -219,7 +353,7 @@
 							<h4 class="pb-20 md-pt-50">Our Vision  </h4>
 							<p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out printed graphic or web designs  in 1the 5th century who is thought scrambled with parts of Cicero's De. Lorem ipsum, or lipsum as</p>
 							<h6 class="mt-30 mb-20">Derek Ramsey</h6>
-							<img src="images/home/sign2.png" alt="">
+							<img src="../Rogan/rogan-b/html/images/home/sign2.png" alt="">
 						</div>
 					</div> <!-- /.row -->
 
@@ -227,21 +361,21 @@
 						<div class="row">
 							<div class="col-lg-4 col-md-6">
 								<div class="feature-block-two text-center" data-aos="fade-up">
-									<img src="images/icon/icon11.svg" alt="" class="icon">
+									<img src="../Rogan/rogan-b/html/images/icon/icon11.svg" alt="" class="icon">
 									<h5 class="pt-25 pb-35">Blazing Performance</h5>
 									<p>Praesent porttitor nunc vit lorem lacus vehicula necu.</p>
 								</div> <!-- /.feature-block-two -->
 							</div> <!-- /.col- -->
 							<div class="col-lg-4 col-md-6">
 								<div class="feature-block-two text-center" data-aos="fade-up" data-aos-delay="100">
-									<img src="images/icon/icon12.svg" alt="" class="icon">
+									<img src="../Rogan/rogan-b/html/images/icon/icon12.svg" alt="" class="icon">
 									<h5 class="pt-25 pb-35">Unlimited Layouts</h5>
 									<p>Praesent porttitor nunc vit lorem lacus vehicula necu.</p>
 								</div> <!-- /.feature-block-two -->
 							</div> <!-- /.col- -->
 							<div class="col-lg-4 col-md-6 m-auto">
 								<div class="feature-block-two text-center" data-aos="fade-up" data-aos-delay="200">
-									<img src="images/icon/icon13.svg" alt="" class="icon">
+									<img src="../Rogan/rogan-b/html/images/icon/icon13.svg" alt="" class="icon">
 									<h5 class="pt-25 pb-35">Super Responsive</h5>
 									<p>Praesent porttitor nunc vit lorem lacus vehicula necu.</p>
 								</div> <!-- /.feature-block-two -->
@@ -263,13 +397,13 @@
 				<div class="agn-about-us">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 order-lg-first">
+						<div class="col-lg-6">
 							<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-							<lottie-player
+							<lottie-player class="custom-svg-b-2"
 							    src="https://assets2.lottiefiles.com/packages/lf20_qfK6Tw.json"  background="transparent"  speed="1"  style="width: 1024px; height: 708px;"  loop  autoplay >
 							</lottie-player>
 						</div>
-						<div class="col-lg-6 order-lg-last">
+						<div class="col-lg-6">
 							<div class="text-wrapper text-wrapper-custom">
 								<div class="theme-title-one">
 									<h2 class="main-title">Leading Digital Agency for Business Solution.</h2>
@@ -295,21 +429,21 @@
 				</div>
 				<div class="row no-gutters">
 					<div class="col-md-4 single-counter-box d-flex align-items-center">
-						<div class="icon-box"><img src="../../rogan-c/html/images/icon/icon44.svg" alt=""></div>
+						<div class="icon-box"><img src="../Rogan/rogan-c/html/images/icon/icon44.svg" alt=""></div>
 						<div class="text">
 							<h2 class="number"><span class="timer" data-from="0" data-to="1980" data-speed="1200" data-refresh-interval="5">0</span></h2>
 							<p>Founded Date</p>
 						</div> <!-- /.text -->
 					</div> <!-- /.single-counter-box -->
 					<div class="col-md-4 single-counter-box d-flex align-items-center">
-						<div class="icon-box"><img src="../../rogan-c/html/images/icon/icon45.svg" alt=""></div>
+						<div class="icon-box"><img src="../Rogan/rogan-c/html/images/icon/icon45.svg" alt=""></div>
 						<div class="text">
 							<h2 class="number"><span class="timer" data-from="0" data-to="3200" data-speed="1200" data-refresh-interval="5">0</span>+</h2>
 							<p>Completed Projects</p>
 						</div> <!-- /.text -->
 					</div> <!-- /.single-counter-box -->
 					<div class="col-md-4 single-counter-box d-flex align-items-center">
-						<div class="icon-box"><img src="../../rogan-c/html/images/icon/icon46.svg" alt=""></div>
+						<div class="icon-box"><img src="../Rogan/rogan-c/html/images/icon/icon46.svg" alt=""></div>
 						<div class="text">
 							<h2 class="number"><span class="timer" data-from="0" data-to="1500" data-speed="1200" data-refresh-interval="5">0</span>+</h2>
 							<p>Worldwide Branches</p>
@@ -339,7 +473,7 @@
 									</svg>
 									<p>“Excepteur sint occaecat cupida non at proident, sunt culp officia deserun moll anim est laborum. Sed perspi!</p>
 									<div class="d-flex align-items-center">
-										<img src="images/home/2.jpg" alt="">
+										<img src="../Rogan/rogan-b/html/images/home/2.jpg" alt="">
 										<div class="name">
 											<h6>Rashed Ka.</h6>
 											<span>Berlin</span>
@@ -380,7 +514,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-3 col-sm-6 col-12 footer-about-widget">
-								<a href="index.html" class="logo"><img src="images/logo/logo.svg" alt=""></a>
+								<a href="index.html" class="logo"><img src="../Rogan/rogan-b/html/images/logo/logo.svg" alt=""></a>
 								<a href="#" class="email">rogan.inc@company.com</a>
 								<a href="#" class="phone">720.661.2231</a>
 								
@@ -439,29 +573,45 @@
 
     	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
     	<!-- jQuery -->
-		<script src="vendor/jquery.2.2.3.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/jquery.2.2.3.min.js"></script>
 		<!-- Popper js -->
-		<script src="vendor/popper.js/popper.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/popper.js/popper.min.js"></script>
 		<!-- Bootstrap JS -->
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/bootstrap/js/bootstrap.min.js"></script>
 	    <!-- menu  -->
-		<script src="vendor/mega-menu/assets/js/custom.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/mega-menu/assets/js/custom.js"></script>
 		<!-- AOS js -->
-		<script src="vendor/aos-next/dist/aos.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/aos-next/dist/aos.js"></script>
 		<!-- WOW js -->
-		<script src="vendor/WOW-master/dist/wow.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/WOW-master/dist/wow.min.js"></script>
 		<!-- owl.carousel -->
-		<script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/owl-carousel/owl.carousel.min.js"></script>
 		<!-- ajaxchimp -->
-		<script src="vendor/ajaxchimp/jquery.ajaxchimp.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/ajaxchimp/jquery.ajaxchimp.min.js"></script>
 		<!-- Tilt js -->
-		<script src="vendor/tilt.jquery.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/tilt.jquery.js"></script>
 
-		<script src="vendor/owl-carousel/owl.carousel.min.js"></script>
+		<script src="../Rogan/rogan-b/html/vendor/owl-carousel/owl.carousel.min.js"></script>
 
 		<!-- Theme js -->
-		<script src="js/theme.js"></script>
+		<script src="../Rogan/rogan-b/html/js/theme.js"></script>
 
+
+
+		<!-- NOTIFIER -->
+
+		<!-- NOTIFIER -->
+
+		<!-- <script src="../Agile/libs/jquery/dist/jquery.min.js"></script> -->
+		<!-- <script src="../Agile/libs/popper.js/dist/umd/popper.min.js"></script> -->
+		<!-- <script src="../Agile/libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
+		<!-- <script src="../Agile/libs/pace-progress/pace.min.js"></script> -->
+		<!-- <script src="../Agile/libs/pjax/pjax.js"></script> -->
+		<!-- <script src="../Agile/assets/js/ajax.js"></script> -->
+		<!-- <script src="../Agile/assets/js/lazyload.config.js"></script> -->
+		<!-- <script src="../Agile/assets/js/lazyload.js"></script> -->
+		<!-- <script src="../Agile/assets/js/plugin.js"></script> -->
+		<!-- <script src="../Agile/assets/js/theme.js"></script> -->		<script src="../Agile/assets/js/theme.js"></script>
 
 
 		</div> <!-- /.main-page-wrapper -->

@@ -4375,3 +4375,14 @@ footer.top-border {border-top:1px solid rgba(0,0,0,0.06);}
 }
 .signUp-minimal .signin-form-wrapper .signUp-text {font-size: 17px;padding-top: 35px;}
 .signUp-minimal .signin-form-wrapper .signUp-text a {color: var(--p-rose);}
+
+.ul-custom{
+  margin: 7% 7% ;
+}
+.nav-link-custom{
+  text-decoration: none;
+  width: 100%;
+  margin-top: 10px;
+  font-family: 'gilroy-semibold';
+  color: black;
+}
