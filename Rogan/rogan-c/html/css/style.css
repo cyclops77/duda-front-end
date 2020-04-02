@@ -1536,6 +1536,20 @@ body .solid-button-one:hover,.navbar .navbar-toggler,.faq-tab-wrapper .faq-panel
   left: -40%;
   top: -95%;
 }
+.custom-svg-service-v3-2{
+  position: absolute;
+  z-index: 3;
+  left: -40%;
+  top: -40%;
+}
+.sizedBox{
+  height: 200px;
+}
+@media screen and (max-width: 767px) {
+  .sizedBox {
+    height: 320px;
+  }
+}
 @media screen and (max-width: 1200px) {
   lottie-player{
     visibility: hidden;
@@ -11665,6 +11679,11 @@ footer.top-border {border-top:1px solid rgba(0,0,0,0.06);}
   background: #fff;
   z-index: 1;
 }
+@media screen and (max-width: 767px) {
+  .text-inner-banner-one {
+    padding-top: 150px;
+  }
+}
 .text-inner-banner-one p {font-size: 24px;}
 .text-inner-banner-one h2 {
   font-family: 'gilroy-bold'; 
@@ -11805,6 +11824,7 @@ footer.top-border {border-top:1px solid rgba(0,0,0,0.06);}
 .intro-text-block {
   background: #ffeceb;
   padding: 100px 0;
+  z-index: 1;
 }
 .intro-text-block h5 {
   font-family: 'gilroy-bold';
