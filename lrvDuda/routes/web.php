@@ -15,3 +15,4 @@ Route::get('/', function () {return view('guest.index');});
 Route::get('/about-us', function () {return view('guest.about-us');});
 Route::get('/service-one', function () {return view('guest.service-one');});
 Route::get('/service-two', function () {return view('guest.service-two');});
+Route::get('/service-three', function () {return view('guest.service-three');});

@@ -217,11 +217,19 @@
   --heading :#2A2A2A;
   --p-rose: #ff5284;
   --rose-gr-bg: linear-gradient( -90deg, rgb(255,182,139) 0%, rgb(255,96,139) 100%);
+
   --rose-gr-reverse: linear-gradient( -90deg, rgb(255,96,139) 0%, rgb(255,182,139) 100%);
   --p-green: #0de49d;
   --p-orange:#ff8618;
   --cyan: #1aceff;
   --redOne:#ff6262;
+}
+.custom-center{
+  text-align: left;
+  padding-left: 45px;
+}
+.fa-check{
+  color: #12D859;
 }
 /* Texto cargando */
 .ctn-preloader .animation-preloader .txt-loading {
@@ -1947,7 +1955,7 @@ body .solid-button-one:hover,.navbar .navbar-toggler,.faq-tab-wrapper .faq-panel
 }
 .agn-our-gallery .owl-theme .owl-nav [class*=owl-] {
   background: transparent;
-  margin: 0 10px;
+  margin: 10px 10px;
   padding: 0;
   font-size: 30px;
   color: rgba(0,0,0,0.4);
@@ -6826,6 +6834,8 @@ body .solid-button-one:hover,.navbar .navbar-toggler,.faq-tab-wrapper .faq-panel
   height: 54px;
   line-height: 54px;
   background: #fff;
+  border: 2px solid rgba(223, 227, 234, 0.5);
+  /*box-shadow: 0px 30px 70px rgba(223, 227, 234, 0.5);*/
   padding: 0;
   border-radius: 50%;
   color: #222222;
@@ -9838,11 +9848,12 @@ html[lang="ru"] .op-menu-one .ct-language__dropdown li a[data-lang="ru"] {color:
 }
 .pricing-plan-three .single-pr-table {
   background: #fff;
-  box-shadow: 0px 10px 40px 0px rgba(60, 67, 113, 0.05);
+  box-shadow: 0px 30px 70px rgba(223, 227, 234, 0.5);
+  border-radius: 5px;
   position: relative;
   text-align: center;
-  border-radius: 5px 5px 0 0;
   margin-top: 50px;
+  border: 3px solid rgba(223, 227, 234, 0.5);
   overflow: hidden;
 }
 .pricing-plan-three .single-pr-table:before {
@@ -9881,6 +9892,8 @@ html[lang="ru"] .op-menu-one .ct-language__dropdown li a[data-lang="ru"] {color:
 .pricing-plan-three .single-pr-table.subway .pr-header {border-top: 6px solid #00e1ce;}
 .pricing-plan-three .single-pr-table.sandwich .pr-header {border-top: 6px solid #ffcd63;}
 .pricing-plan-three .single-pr-table.burger .pr-header {border-top: 6px solid #9f4aff;}
+.pricing-plan-three .single-pr-table.custom-burger .pr-header {border-top: 6px solid #89ff4a;}
+.pricing-plan-three .single-pr-table.custom-sandwich .pr-header {border-top: 6px solid #ff723b;}
 .pricing-plan-three .single-pr-table .pr-header .title {
   font-size: 18px;
   text-transform: uppercase;
@@ -9905,7 +9918,7 @@ html[lang="ru"] .op-menu-one .ct-language__dropdown li a[data-lang="ru"] {color:
 .pricing-plan-three .single-pr-table .pr-body .slogan {
   font-size: 24px;
   padding-bottom: 20px;
-  text-decoration: underline;
+  text-decoration: none;
   color: var(--text-dark);
 }
 .pricing-plan-three .single-pr-table .pr-body ul li {

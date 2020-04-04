@@ -450,7 +450,7 @@
 @section('css')
 	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/style.css')}}">
 	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/responsive.css')}}">
-	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/flaticon.css')}}">
+	<!-- <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/flaticon.css')}}"> -->
 	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/global.css')}}">
 	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/mainmenu.css')}}">
 	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/style.css')}}">
