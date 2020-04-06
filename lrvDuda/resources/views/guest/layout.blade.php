@@ -345,17 +345,7 @@
 		<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		<script src="{{asset('Rogan/rogan-c/html/js/lang.js')}}"></script>
 		<script src="{{asset('Rogan/rogan-c/html/js/theme.js')}}"></script>
-		<!-- <script src="{{asset('Rogan/rogan-b/html/vendor/jquery.2.2.3.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/popper.js/popper.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/mega-menu/assets/js/custom.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/aos-next/dist/aos.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/WOW-master/dist/wow.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/owl-carousel/owl.carousel.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/ajaxchimp/jquery.ajaxchimp.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/tilt.jquery.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/vendor/owl-carousel/owl.carousel.min.js')}}"></script>
-		<script src="{{asset('Rogan/rogan-b/html/js/theme.js')}}"></script> -->
+		@yield('script')
 		</div> 
 
 		<!-- /.main-page-wrapper -->

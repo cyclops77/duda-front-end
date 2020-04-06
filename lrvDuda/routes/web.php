@@ -16,3 +16,6 @@ Route::get('/about-us', function () {return view('guest.about-us');});
 Route::get('/service-one', function () {return view('guest.service-one');});
 Route::get('/service-two', function () {return view('guest.service-two');});
 Route::get('/service-three', function () {return view('guest.service-three');});
+Route::get('/news', function () {return view('guest.news');});
+
+Route::get('/ajax-pages', function () {return view('guest.ajax');});
