@@ -1,5 +1,30 @@
 @extends('guest.layout')
 @section('title','Beranda')
+@section('preloader')
+<section>
+				<div id="preloader">
+					<div id="ctn-preloader" class="ctn-preloader">
+						<div class="animation-preloader">
+							<div class="spinner"></div>
+							<div class="txt-loading">
+								<span data-text-preloader="D" class="letters-loading">
+									D
+								</span>
+								<span data-text-preloader="U" class="letters-loading">
+									U
+								</span>
+								<span data-text-preloader="D" class="letters-loading">
+									D
+								</span>
+								<span data-text-preloader="A" class="letters-loading">
+									A
+								</span>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</section>
+@stop
 @section('content')
 <div id="theme-banner-four">
 				<div class="custom-svg-c wow fadeInRight animated">
@@ -258,7 +283,7 @@
 										</ul>
 									</div> <!-- /.pr-body -->
 									<div class="pr-footer">
-										<a href="#" class="plan-button theme-btn line-button-two">Choaose Plan</a>
+										<a href="#" class="plan-button theme-btn custom-index-btn">Choose Plan</a>
 										<a href="#" class="trial-button">Get your 30 day free trial</a>
 									</div> <!-- /.pr-footer -->
 								</div> <!-- /.single-pr-table -->
@@ -281,7 +306,7 @@
 										</ul>
 									</div> <!-- /.pr-body -->
 									<div class="pr-footer">
-										<a href="#" class="plan-button theme-btn line-button-two">Choose Plan</a>
+										<a href="#" class="plan-button theme-btn custom-index-btn">Choose Plan</a>
 										<a href="#" class="trial-button">Get your 30 day free trial</a>
 									</div> <!-- /.pr-footer -->
 								</div> <!-- /.single-pr-table -->
@@ -304,7 +329,7 @@
 										</ul>
 									</div> <!-- /.pr-body -->
 									<div class="pr-footer">
-										<a href="#" class="plan-button theme-btn line-button-two">Choose Plan</a>
+										<a href="#" class="plan-button theme-btn custom-index-btn">Choose Plan</a>
 										<a href="#" class="trial-button">Get your 30 day free trial</a>
 									</div> <!-- /.pr-footer -->
 								</div> <!-- /.single-pr-table -->

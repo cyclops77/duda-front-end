@@ -45,30 +45,8 @@
 				Loading Transition
 			==================================================== -->
 			<!-- Preloader -->
-			<section>
-				<div id="preloader">
-					<div id="ctn-preloader" class="ctn-preloader">
-						<div class="animation-preloader">
-							<div class="spinner"></div>
-							<div class="txt-loading">
-								<span data-text-preloader="D" class="letters-loading">
-									D
-								</span>
-								<span data-text-preloader="U" class="letters-loading">
-									U
-								</span>
-								<span data-text-preloader="D" class="letters-loading">
-									D
-								</span>
-								<span data-text-preloader="A" class="letters-loading">
-									A
-								</span>
-							</div>
-						</div>	
-					</div>
-				</div>
-			</section>
-
+			
+			@yield('preloader')
 
 			<!-- 
 			=============================================
@@ -146,7 +124,7 @@
 									                	</a>
 									                </div>
 									                <div class="col-lg-3 col-md-4 col-sm-6 mt-3 mb-3 mt-lg-3 mb-lg-3">
-									                	<a href="service-v3.html" class="img-box">
+									                	<a href="{{url('/service-three')}}" class="img-box">
 									                		<span class="img"><img src="{{asset('Rogan/rogan-c/html/images/menu-img/home-5.jpg')}}" alt=""></span>
 									                		<span class="text">Business Agency 2</span>
 									                	</a>
