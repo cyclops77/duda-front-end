@@ -44,3 +44,14 @@ function valUsername() {
     }
     document.getElementById("EmailMessage").innerHTML = msg;
   }
+  function preview(event) {
+      var input = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(){
+        var result = reader.result;
+        var img = document.getElementById('img');
+        img.src = result;
+      }
+      document.getElementById("name_image").innerHTML = input.name;
+      reader.readAsDataURL(input);
+    }

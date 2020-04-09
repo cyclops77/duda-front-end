@@ -2,32 +2,55 @@
 <html>
 
 <head>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script type="text/javascript" src="{{asset('datepicker/bootstrap-datepicker.js')}}"></script>
-  <link rel="stylesheet" type="text/css" href="{{asset('datepicker/bootstrap-datepicker.css')}}" >
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script>
-
-      $(function() {
-
-      $('.dates #usr1').datepicker({
-        'format': 'yyyy-mm-dd',
-        'autoclose': true
-      });
-
-
-    });
-  </script>
+  <style type="text/css">
+    .image-preview{
+      padding: 10px;
+      margin: 20px;
+      width: 300px;
+      height: 300px;
+      
+      border: 2px solid #dddddd;
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #cccccc;
+    }
+    .image-preview__image{
+      width: 100%;
+    }
+    #img{
+      padding: 10px;
+      margin: 20px;
+      width: 300px;
+      min-height: 100px;
+      max-height: 300px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 
 <body>
-<div class="container">
-
-  <div class="dates" style="margin-top:100px;color:#2471a3;">
-    <label>Choose DOB</label>
-    <input type="text" style="width:200px;background-color:#aed6f1;" class="form-control" id="usr1" name="event_date" placeholder="YYYY-MM-DD" autocomplete="off" >
+  <div class="container">
+    <input type="file" name="inpFile" id="inpFile" onchange="preview(event)" accept="image/x-png,image/jpg,image/jpeg">
+      <div class="image-preview">
+        <img src="" class="" id="img" >
+      </div>
+        <span id="name_image"></span>
   </div>
-</div>
-
+<script type="text/javascript">
+    function preview(event) {
+      var input = event.target.files[0];
+      var reader = new FileReader();
+      reader.onload = function(){
+        var result = reader.result;
+        var img = document.getElementById('img');
+        img.src = result;
+      }
+      document.getElementById("name_image").innerHTML = input.name;
+      reader.readAsDataURL(input);
+    }
+</script>
 </body>
 </html>

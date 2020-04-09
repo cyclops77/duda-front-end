@@ -23,6 +23,7 @@ Route::get('/kebijakan-layanan', function () {return view('guest.kebijakan-layan
 Route::get('/privasi-pengguna', function () {return view('guest.privasi-pengguna');});
 Route::get('/cek-status-order', function () {return view('guest.cek-status-order');});
 Route::get('/konfirmasi-pembayaran', function () {return view('guest.konfirmasi-pembayaran');});
+Route::get('/testimonial', function () {return view('guest.testimonial');});
 Route::get('/test', function () {return view('test');});
 
 

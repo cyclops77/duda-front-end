@@ -1,6 +1,16 @@
 @extends('guest.layout')
 
+@section('css')
+  <link rel="stylesheet" href="{{asset('Agile/assets/css/i-con.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('Agile/assets/css/theme.css')}}" type="text/css" />
+  <link rel="stylesheet" href="{{asset('Agile/assets/css/style.css')}}" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+@stop
 @section('script')
+<script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+ <script src="{{asset('custom-javascript.js')}}"></script>
+ <link rel="stylesheet" href="{{asset('custom-css.css')}}">
+
  <script type="text/javascript" src="{{asset('datepicker/bootstrap-datepicker.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset('datepicker/bootstrap-datepicker.css')}}" >
     <script>
@@ -11,6 +21,7 @@
         });
       });
     </script>
+
 @stop
 
 @section('content')
@@ -58,105 +69,77 @@
       <div class="col-lg-6">
         <div class="text-wrapper text-wrapper-custom">
           <div class="theme-title-one">
-            <h2 class="main-title">Leading Digital Agency for Business Solution.</h2>
-          </div> <!-- /.theme-title-one -->
+            <h2 class="main-title title-custom">Leading Digital Agency for Business Solution.</h2>
+          </div>
           <p>Lorem ipsum dolor sit amet, hendrerit omittantur mel, es vidit animal iracundia. Ius te altera essent incorrupte. Id alien accu consetetur eam, nibh aliquam iracundia.</p>
         
         </div>
       </div>
-      
     </div>
-  </div> <!-- /.container -->
-  
-</div> <!-- /.row -->
-</div> <!-- /.team-standard -->
+  </div>
+  </div> 
+</div> 
 <style type="text/css">
-  .danger-sm{
-    color: red;
-  }
-  .border-danger{
-    border: 1px solid red;
-  }
 </style>
 <div class="container">
   <form data-plugin="parsley" data-option="{}">
-        <div class="card">
+        <div class="card border-custom">
           <div class="card-header">
-            <strong>Type constraints</strong>
+            <strong>Konfirmasi Pemabayaran</strong>
           </div>
           <div class="card-body">   
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">No. Invoice</label>
               <div class="col-sm-9">
-                <input type="number" onkeyup="valInvoice()" id="invoice" class="form-control" required placeholder="Username">    
+                <input type="number" onkeyup="valInvoice()" id="invoice" class="form-control" required placeholder="No. Invoice">    
                 <small id="InvoiceMessage" class="danger-sm"></small>
               </div>
             </div>        
+
             <div class="form-group row">
               <label class="col-sm-3 col-form-label">Nama Pengirim</label>
               <div class="col-sm-9">
                 <input type="text" class="form-control" required placeholder="Nama Pengirim">    
               </div>
             </div>           
-            <div class="form-group row">
+            <div class="form-group row dates">
               <label class="col-sm-3 col-form-label">Tanggal Pembayaran</label>
               <div class="col-sm-9">
 
-                <input type="text" class="form-control" id="picker">
+                <input type="text" class="form-control" id="usr1" name="event_date" placeholder="YYYY-MM-DD" autocomplete="off" >
                 <small id="EmailMessage" class="danger-sm"></small>
               </div>
             </div>
-            <div class="dates" style="margin-top:100px;color:#2471a3;">
-              <label>Choose DOB</label>
-              <input type="text" style="width:200px;background-color:#aed6f1;" class="form-control" id="usr1" name="event_date" placeholder="YYYY-MM-DD" autocomplete="off" >
-            </div>
+            
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Url</label>
+              <label class="col-sm-3 col-form-label">Bank Tujuan</label>
               <div class="col-sm-9">
-                <input type="url" class="form-control" placeholder="url">
+                <input type="text" class="form-control" placeholder="Bank Tujuan">
               </div>
             </div>
             
             <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Integer</label>
+              <label class="col-sm-3 col-form-label">Pesan (Note)</label>
               <div class="col-sm-9">
-                <input type="text" data-parsley-type="integer" class="form-control" placeholder="Integer">
+                <textarea class="form-control"></textarea>
               </div>
             </div>
-            
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Digits</label>
-              <div class="col-sm-9">
-                <input type="text" data-parsley-type="digits" class="form-control" placeholder="digits">
+           <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Upload Bukti Bayar</label>
+            <div class="col-sm-9">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input-css" name="inpFile" id="inpFile" onchange="preview(event)" accept="image/x-png,image/jpg,image/jpeg">
+                <div class="image-preview">
+                  <img src="{{asset('noimage.png')}}" class="" id="img" >
+                </div>
+                <span id="name_image"></span>
               </div>
             </div>
-            
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Number</label>
-              <div class="col-sm-9">
-                <input type="text" data-parsley-type="number" class="form-control" placeholder="number">
-              </div>
+          </div>
+            <div class="container pt-50">
+              <div class="text-right">
+              <button type="submit" class="btn btn-primary float-left" style="width: 100px;">Kirim</button>
             </div>
-            
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Alphanum</label>
-              <div class="col-sm-9">
-                <input type="text" data-parsley-type="alphanum" class="form-control" placeholder="alphanumeric string">
-              </div>
-            </div>
-            
-            <div class="form-group row">
-              <label class="col-sm-3 col-form-label">Equal To</label>
-              <div class="col-sm-9">
-                <div class="row">
-                  <div class="col-sm-6"><input type="text" value="foo" id="foo" class="form-control"></div>
-                  <div class="col-sm-6"><input type="text" data-parsley-equalto="#foo" placeholder="equal to foo" class="form-control"></div>
-                </div>                            
-              </div>
-            </div>
-            
-            <div class="text-right">
-              <button type="submit" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </div>
