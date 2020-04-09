@@ -1,7 +1,16 @@
 @extends('guest.layout')
 @section('title','Beranda')
+@section('notif')
+ASau
+@stop
+@section('notif')
+sad
+@stop
+@section('script')
+    <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+@stop
 @section('preloader')
-<section>
+<!-- <section>
 				<div id="preloader">
 					<div id="ctn-preloader" class="ctn-preloader">
 						<div class="animation-preloader">
@@ -23,7 +32,7 @@
 						</div>	
 					</div>
 				</div>
-			</section>
+			</section> -->
 @stop
 @section('content')
 <div id="theme-banner-four">

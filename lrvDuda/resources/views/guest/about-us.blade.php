@@ -1,6 +1,9 @@
 @extends('guest.layout')
 
 @section('title','About Us')
+@section('script')
+    <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+@stop
 @section('content')
 			<div class="banner-large-text pb-350 pos-r md-pt-200 md-pb-150">
 				<div class="shape-wrapper">

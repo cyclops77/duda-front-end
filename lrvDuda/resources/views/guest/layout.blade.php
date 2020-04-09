@@ -20,22 +20,24 @@
 		<title>@yield('title')</title>
 
 
-		<link rel="icon" type="image/png" sizes="56x56" href="{{asset('Rogan/rogan-b/html/images/fav-icon/icon.png')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-b/html/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-b/html/css/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-c/html/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-c/html/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('Agile/assets/css/i-con.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{asset('Agile/assets/css/theme.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/responsive.css')}}">
+    <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/global.css')}}">
+    <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/mainmenu.css')}}">
+    <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/responsive.css')}}">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-b/html/css/style.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-b/html/css/responsive.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-c/html/css/style.css')}}">
-		<link rel="stylesheet" type="text/css" href="{{asset('Rogan/rogan-c/html/css/responsive.css')}}">
-		<link rel="stylesheet" href="{{asset('Agile/i-con.css')}}" type="text/css" />
-		<link rel="stylesheet" href="{{asset('Agile/theme.css')}}" type="text/css" />
-		<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/style.css')}}">
-	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/responsive.css')}}">
-	<!-- <link rel="stylesheet" href="{{asset('Rogan/style-outer/css/flaticon.css')}}"> -->
-	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/global.css')}}">
-	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/mainmenu.css')}}">
-	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/style.css')}}">
-	<link rel="stylesheet" href="{{asset('Rogan/style-outer/css/responsive.css')}}">
-		@yield('css')
+
+  
+   
+    @yield('css')
 	</head>
 
 	<body>
@@ -88,15 +90,53 @@
 						<img src="{{asset('rsz_duda.png')}}" alt="" style="height: 50px;margin-top: 10px">
 					</a>
 				</div>
+				<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+				<script> 
+				$(document).ready(function(){
+				  $("#tester").click(function(){
+				    $(".custom-dropdown").slideToggle("slow");
+				  });
+				});
+				</script>
+				<script> 
+				$(document).ready(function(){
+				  $("#notif-responsive").click(function(){
+				    $(".custom-dropdown-responsive").slideToggle("slow");
+				  });
+				});
+				</script>
 				<nav id="mega-menu-holder" class="navbar navbar-expand-lg">
 					<div  class="ml-auto nav-container">
 						<button style="margin-right: 10px;"
 						 class="navbar-toggler navbar-toggler-right custom-padding-nav" type="button"  data-toggle="modal" data-target="#user" data-toggle-class="modal-open-aside" data-target="body">
 					        <i class="flaticon-setup"></i>
 						</button>
-						<a style="margin-right: 15px;" class="navbar-toggler navbar-toggler-right custom-padding-nav">
+						<a style="margin-right: 15px;" class="navbar-toggler navbar-toggler-right custom-padding-nav" onclick="openNotif()">
 							<i class="i-con i-con-bell"><i></i></i>
 						</a>
+						<script type="text/javascript">
+							function openNotif() {
+								 var x = document.getElementById("resp-a");
+								 if (x.style.display === "none") {
+								    x.style.display = "block";
+								  } else {
+								    x.style.display = "none";
+								  }
+							}
+						</script>
+						<div class="dropdown-menu-right custom-dropdown-responsive" id="resp-a" style="display: none;">
+										<div class="scrollable hover" style="max-height: 250px">
+										  <div class="list list-row animates animates-fadeInUp">
+											  @include('guest.partials.notif')
+										  </div>
+										</div>
+										<div class="d-flex px-3 py-2 b-t">
+										  <div class="flex">
+											<span>6 Notifications</span>
+										  </div>
+										  <a href="setting.html">See all <i class="fa fa-angle-right text-muted"></i></a>
+										</div>
+									</div>
 					   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 					   		<ul class="navbar-nav">
 							    <li class="nav-item">
@@ -142,104 +182,23 @@
 							        </ul>
 							    </li>
 						        <li class="nav-item dropdown">
-						            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">News</a>
+						            <a class="nav-link" href="#">News</a>
 								</li>
 								
 								<!-- <i class="flaticon-play-button"></i> -->
 								<li class="nav-item">
-									<a class="px-2 i-con-h-a mr-lg-2" data-toggle="dropdown">
+									<a class="px-2 i-con-h-a mr-lg-2" id="tester">
 									  <i class="i-con i-con-bell"><i></i></i>
 									  <!-- <span class="badge badge-pill badge-up bg-primary text-white">9</span> -->
 									</a>
+									
+									<!-- resps -->
+									
 									<!-- dropdown -->
-									<div class="dropdown-menu dropdown-menu-right mt-3 w-md animate fadeIn p-0">
+									<div class="dropdown-menu-right custom-dropdown" style="none">
 										<div class="scrollable hover" style="max-height: 250px">
 										  <div class="list list-row animates animates-fadeInUp">
-											  <div class="list-item " data-id="9">
-												<div>
-												<a href="#">
-												  <span class="w-32 avatar circle bg-info-lt" >
-														<img src="{{asset('Agile/assets/img/a9.jpg')}}" alt=".">
-												  </span>
-												</a>
-												</div>
-												<div class="flex">
-													<div class="item-feed h-2x">
-													  Added to <a href='#'>GameTime</a> team
-													</div>
-												</div>
-											  </div>
-											  <div class="list-item " data-id="12">
-												<div>
-												<a href="#">
-												  <span class="w-32 avatar circle bg-info-lt" >
-														D
-												  </span>
-												</a>
-												</div>
-												<div class="flex">
-													<div class="item-feed h-2x">
-													  <a href='#'>Mike</a> upload last week lessons summary
-													</div>
-												</div>
-											  </div>
-											  <div class="list-item " data-id="8">
-												<div>
-												<a href="#">
-												  <span class="w-32 avatar circle bg-success-lt" >
-														<img src="{{asset('Agile/assets/img/a8.jpg')}}" alt=".">
-												  </span>
-												</a>
-												</div>
-												<div class="flex">
-													<div class="item-feed h-2x">
-													  Mike Added you to <a href='#'>repo</a>
-													</div>
-												</div>
-											  </div>
-											  <div class="list-item " data-id="2">
-												<div>
-												<a href="#">
-												  <span class="w-32 avatar circle bg-primary-lt" >
-														<img src="{{asset('Agile/assets/img/a2.jpg')}}" alt=".">
-												  </span>
-												</a>
-												</div>
-												<div class="flex">
-													<div class="item-feed h-2x">
-													  What's the project progress now
-													</div>
-												</div>
-											  </div>
-											  <div class="list-item " data-id="15">
-												<div>
-												<a href="#">
-												  <span class="w-32 avatar circle bg-success-lt" >
-														G
-												  </span>
-												</a>
-												</div>
-										  
-												<div class="flex">
-													<div class="item-feed h-2x">
-													  We attempted to charge your <a href='#'>Pro plan</a>
-													</div>
-												</div>
-											  </div>
-											  <div class="list-item " data-id="6">
-												<div>
-												<a href="#">
-												  <span class="w-32 avatar circle bg-danger-lt" >
-														<img src="{{asset('Agile/assets/img/a6.jpg')}}" alt=".">
-												  </span>
-												</a>
-												</div>
-												<div class="flex">
-													<div class="item-feed h-2x">
-													  Homepage mockup design
-													</div>
-												</div>
-											  </div>
+											  @include('guest.partials.notif')
 										  </div>
 										</div>
 										<div class="d-flex px-3 py-2 b-t">
@@ -254,10 +213,8 @@
 						        <li class="login-button"><a href="">Contact Us</a></li>
 						   </ul>
 					   </div>
-					</div> <!-- /.container -->
-				</nav> <!-- /#mega-menu-holder -->
-				<!-- /.header-right-widget -->
-
+					</div>
+				</nav>
 			</div> 
 			@yield('content')
 			<footer class="theme-footer-one p0">
@@ -331,7 +288,8 @@
 
 		<!-- Optional JavaScript _____________________________  -->
 
-		<script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+		<!-- <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script> -->
+		@yield('script')
 		<script src="{{asset('Rogan/rogan-c/html/vendor/popper.js/popper.min.js')}}"></script>
 		<script src="{{asset('Rogan/rogan-c/html/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
 		<script src="{{asset('Rogan/rogan-c/html/vendor/mega-menu/assets/js/custom.js')}}"></script>
@@ -345,7 +303,6 @@
 		<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 		<script src="{{asset('Rogan/rogan-c/html/js/lang.js')}}"></script>
 		<script src="{{asset('Rogan/rogan-c/html/js/theme.js')}}"></script>
-		@yield('script')
 		</div> 
 
 		<!-- /.main-page-wrapper -->

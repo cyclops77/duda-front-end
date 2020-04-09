@@ -42,7 +42,7 @@
 			-->
 			<div class="our-portfolio">
 				<div class="container">
-					<div id="filter-for-classic" class="cbp-l-filters-alignCenter filter-menu">
+					<!-- <div id="filter-for-classic" class="cbp-l-filters-alignCenter filter-menu">
 				        <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
 				            ALL <div class="cbp-filter-counter"></div>
 				        </div>
@@ -58,7 +58,7 @@
 				        <div data-filter=".developement" class="cbp-filter-item">
 				            Development <div class="cbp-filter-counter"></div>
 				        </div>
-				    </div>
+				    </div> -->
 
 
 				    <div id="style-grid-one" class="cbp cube-port">

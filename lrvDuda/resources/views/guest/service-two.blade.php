@@ -1,5 +1,8 @@
 @extends('guest.layout')
 
+@section('script')
+    <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+@stop
 @section('content')
 <div class="text-inner-banner-one pos-r">
                 <div class="shape-wrapper">
