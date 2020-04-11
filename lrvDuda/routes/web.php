@@ -24,8 +24,8 @@ Route::get('/privasi-pengguna', function () {return view('guest.privasi-pengguna
 Route::get('/cek-status-order', function () {return view('guest.cek-status-order');});
 Route::get('/konfirmasi-pembayaran', function () {return view('guest.konfirmasi-pembayaran');});
 Route::get('/testimonial', function () {return view('guest.testimonial');});
-Route::get('/test', function () {return view('test');});
-
+Route::get('/portfolio-index',function () {return view('guest.portfolio');});
 
 Route::get('/ajax-pages', function () {return view('guest.ajax');});
 Route::get('/notifikasi','NotifiyController@index');
+Route::get('/test', function () {return view('test');});

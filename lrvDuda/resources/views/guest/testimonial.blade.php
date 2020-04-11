@@ -62,6 +62,27 @@
   </div>
   </div> 
 </div> 
+<div class="container">	
+  <div class="theme-title-one text-center pb-50 md-pb-30">
+    {{-- <h2 class="main-title">Our Provided <br><i>Services.</i></h2> --}}
+  </div> <!-- /.theme-title-one -->
+
+  <div class="row">
+    @for($a=1; $a<=9; $a++)
+    <div class="col-lg-4">
+      <div class="feature-block-three mt-50">
+        <div class="d-flex align-items-start">
+          <div class="text">
+            <h5>Marketing Statics.</h5>
+            <p class="pt-20 pb-10">Lorem ipsum dolor sit amet, vix a natum labitur eleifd, mel am laoret menandr qu. 
+              quality text dsu</p>
+          </div> <!-- /.text -->
+        </div>
+      </div> <!-- /.feature-block-three -->
+    </div>
+    @endfor
+  </div>
+</div>
 <style type="text/css">
 </style>
 @stop

@@ -11708,7 +11708,7 @@ footer.top-border {border-top:1px solid rgba(0,0,0,0.06);}
 /*^^^^^^^^^^^^^^^^^^^^ Feature Block Three ^^^^^^^^^^^^^^^^^^^*/
 .feature-block-three {
   position: relative;
-  padding: 50px 40px 38px 70px;
+  padding: 30px 0px 20px 0px;
   background: #fff;
   box-shadow: 0px 30px 70px 0px rgba(223, 227, 234, 0.5);
 }
@@ -11738,8 +11738,28 @@ footer.top-border {border-top:1px solid rgba(0,0,0,0.06);}
   top:50%;
   transform: translateY(-50%);
 }
-.feature-block-three .text {width: calc(100% - 55px);padding-left: 38px;}
-.feature-block-three .text h5 {font-family: 'gilroy-bold';font-size: 22px;}
+.feature-block-three .text {
+  /* width: calc(100% - 55px);padding-left: 38px; */
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+}
+.feature-block-three .text h5 {
+  font-family: 'gilroy-bold';
+  font-size: 22px;
+  height: 24px;
+  left: 0%;
+  right: 0.58%;
+  top: calc(50% - 24px/2 + 2px);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  /* identical to box height */
+  color: #313131;
+}
 .feature-block-three .text .read-more {font-size: 35px;color: var(--text-light);}
 .feature-block-three:hover .text .read-more {color: var(--p-orange);}
 .our-service-three .shape-one {right: 0;top:0;}

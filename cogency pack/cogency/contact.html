@@ -174,26 +174,28 @@
                                 <div class="contact-box">
                                     <ul class="nav mb-35" id="pills-tab" role="tablist">
                                         <li class="nav-item">
-                                            <a class="nav-link active" id="tab-one-tab" data-toggle="pill" href="#tab-one" role="tab" aria-controls="tab-one" aria-selected="true">
+                                            <!-- INI DIA -->
+                                            <a class="nav-link custom-redirect-1 active" id="tab-one-tab" data-toggle="pill" href="#tab-one" role="tab" aria-controls="tab-one" aria-selected="true">
                                                 <i class="flaticon-bag"></i>
                                                 <span>Pre-Sales</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="tab-two-tab" data-toggle="pill" href="#tab-two" role="tab" aria-controls="tab-two" aria-selected="false">
+                                            <a class="nav-link custom-redirect-2" id="tab-two-tab" data-toggle="pill" href="#tab-two" role="tab" aria-controls="tab-two" aria-selected="false">
                                                 <i class="flaticon-services-portfolio"></i>
                                                 <span>Project Proposal</span>
                                             </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" id="tab-three-tab" data-toggle="pill" href="#tab-three" role="tab" aria-controls="tab-three" aria-selected="false">
+                                            <a class="nav-link custom-redirect" id="tab-three-tab" data-toggle="pill" href="#tab-three" role="tab" aria-controls="tab-three" aria-selected="false">
                                                 <i class="flaticon-information"></i>
                                                 <span>Other</span>
                                             </a>
                                         </li>
                                     </ul>
                                     <div class="tab-content" id="pills-tabContent">
-                                        <div class="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
+                                        <!-- INI DIA -->
+                                        <div class="tab-pane fade custom-body-redirect-1 show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
 
                                             <!-- start form style -->
                                             <div class="contact-form-wrap">
@@ -210,31 +212,24 @@
                                                                 <input type="text" placeholder="Last Name*">
                                                             </div>
                                                         </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="your-email">
-                                                                <input type="email" placeholder="Email*">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="your-website">
-                                                                <input type="text" placeholder="Subject*">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <div class="your-message">
-                                                                <textarea name="comments" cols="30" rows="10" placeholder="Message"></textarea>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-xl-12">
-                                                            <button class="btn-bg" type="submit">Submit Request</button>
+                                                        <div class="col-xl-12 nav-item" id="pills-tab" role="tablist">
+                                                            <button class="btn-bg" id="next" type="button">Next</button>
                                                         </div>
                                                     </div>
                                                 </form>
                                             </div>
                                             <!-- end form style -->
-
+                                            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                                            <script type="text/javascript">
+                                            $("#next").click(function(){
+                                                $(".custom-redirect-2").addClass("active");
+                                                $(".custom-redirect-1").removeClass("active");
+                                                $(".custom-body-redirect-2").addClass(" show active");
+                                                $(".custom-body-redirect-1").removeClass(" show active");                                                
+                                            });
+                                        </script>
                                         </div>
-                                        <div class="tab-pane fade" id="tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
+                                        <div class="tab-pane fade custom-body-redirect-2" id="tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
 
                                             <!-- start form style -->
                                             <div class="contact-form-wrap rmb-30">
@@ -243,7 +238,7 @@
                                                         
                                                         <div class="col-xl-12">
                                                             <div class="your-name">
-                                                                <input type="text" placeholder="Full Name*">
+                                                                <input type="text" placeholder="KE 2*">
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-12">
@@ -262,7 +257,10 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-xl-12">
-                                                            <button class="btn-bg" type="submit">Submit Request</button>
+                                                            <button class="btn-bg" type="submit">Next</button>
+                                                        </div>
+                                                        <div class="col-xl-12">
+                                                            <button class="btn-bg" type="submit">Previous</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -270,7 +268,7 @@
                                             <!-- end form style -->
 
                                         </div>
-                                        <div class="tab-pane fade" id="tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
+                                        <div class="tab-pane fade custom-redirect" id="tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
 
                                             <!-- start form style -->
                                             <div class="contact-form-wrap rmb-30">
@@ -297,9 +295,13 @@
                                                                 <textarea name="comments" cols="30" rows="10" placeholder="Message"></textarea>
                                                             </div>
                                                         </div>
-                                                        <div class="col-xl-12">
-                                                            <button class="btn-bg" type="submit">Submit Request</button>
+                                                       <div class="col-xl-12">
+                                                            <button class="btn-bg" type="submit">Next</button>
                                                         </div>
+                                                        <div class="col-xl-12">
+                                                            <button class="btn-bg" type="submit">Previous</button>
+                                                        </div>
+
                                                     </div>
                                                 </form>
                                             </div>
