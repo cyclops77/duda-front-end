@@ -17,7 +17,13 @@ Route::get('/service-one', function () {return view('guest.service-one');});
 Route::get('/service-two', function () {return view('guest.service-two');});
 Route::get('/service-three', function () {return view('guest.service-three');});
 Route::get('/news', function () {return view('guest.news');});
-Route::get('/pesan-sekarang', function () {return view('guest.pesan-sekarang');});
+// Route::get('/pesan-sekarang', function () {return view('guest.pesan-sekarang');});
+
+Route::get('/pesan-sekarang','LayananController@index');
+Route::get('/json-kategori','LayananController@kategori');
+Route::get('/json-produk','LayananController@produk');
+Route::get('/cek-produk','LayananController@cekProduk');
+
 Route::get('/contact-us', function () {return view('guest.contact-us');});
 Route::get('/kebijakan-layanan', function () {return view('guest.kebijakan-layanan');});
 Route::get('/privasi-pengguna', function () {return view('guest.privasi-pengguna');});

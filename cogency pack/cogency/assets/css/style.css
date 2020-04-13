@@ -1208,6 +1208,12 @@ Footer Section
 .form-style input {
     height: 78px;
 }
+.form-style select{
+    height: 60px;
+}
+.form-style option{
+    height: 60px;
+}
 .form-style textarea {
     height: 125px;
 }

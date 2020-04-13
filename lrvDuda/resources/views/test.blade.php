@@ -1,56 +1,23 @@
-<!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <style type="text/css">
-    .image-preview{
-      padding: 10px;
-      margin: 20px;
-      width: 300px;
-      height: 300px;
-      
-      border: 2px solid #dddddd;
-      margin-top: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #cccccc;
-    }
-    .image-preview__image{
-      width: 100%;
-    }
-    #img{
-      padding: 10px;
-      margin: 20px;
-      width: 300px;
-      min-height: 100px;
-      max-height: 300px;
-      object-fit: cover;
-    }
-  </style>
+    <title>Jquery - input tags plugin example</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
 </head>
+<body style="background: #337AB7">
 
-<body>
-  <div class="container">
-    <input type="file" name="inpFile" id="inpFile" onchange="preview(event)" accept="image/x-png,image/jpg,image/jpeg">
-      <div class="image-preview">
-        <img src="" class="" id="img" >
-      </div>
-        <span id="name_image"></span>
-  </div>
+
+<div style="width: 500px; margin: 0px auto;">
+  <h2 style="font-family:cursive;">Jquery - input tags plugin example</h2>
+  <input name="tags" id="input-tags" style="width:500px !important" />
+</div>
+
+
 <script type="text/javascript">
-    function preview(event) {
-      var input = event.target.files[0];
-      var reader = new FileReader();
-      reader.onload = function(){
-        var result = reader.result;
-        var img = document.getElementById('img');
-        img.src = result;
-      }
-      document.getElementById("name_image").innerHTML = input.name;
-      reader.readAsDataURL(input);
-    }
+  $('#input-tags').tagsInput();
 </script>
+
+
 </body>
 </html>
