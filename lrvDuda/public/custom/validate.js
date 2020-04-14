@@ -23,12 +23,18 @@
      }else if ($("#appended-produk").length) {
         if (!produkX) {
         errormsg = 'Warning';
-        errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Produk Layanan Terlebih dahulu !!! Kemudian pilihlah Kategori Dari Layanan ...'; 
+        errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Produk Layanan Terlebih dahulu !!!'; 
         $('#alert-modal').modal('show');
         $('#modal-message').html(errormsg);
         $('#error-body').html(errorbody);
         }
-     }
+     }else{
+
+            $(".custom-redirect-2").addClass("active");
+            $(".custom-redirect-1").removeClass("active");
+            $(".custom-body-redirect-2").addClass(" show active");
+            $(".custom-body-redirect-1").removeClass(" show active");                                                
+        }
   })      
             
         

@@ -39,17 +39,13 @@ class LayananController extends Controller
             ]));
         }
     }
-    public function cekProduk(Request $request)
+    public function cek(Request $request)
     {
-        $id_kategori = $request->kategori_id;
-        $a = Kategori_layanan::whereId($id_kategori)->first();
-        $cek = Produk::where('kategori_layanan_id',$id_kategori)->first();
-        if (empty($cek)) {
-            dd("GAADA PRODUK");
-        }else{
-            dd("Ada :v");
+        $hasil = Layanan::whereId($request->id)->first();
+        if($hasil){
+            $res = 'ada';
+            return response()->json(['msg' => $res]);
         }
-        // $b = Layanan::whereId($a->layanan_id)->first();
     }
     /**
      * Show the form for creating a new resource.
