@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Validator;
 use \App\Layanan;
 use \App\Kategori_layanan;
 use \App\Produk;
@@ -45,6 +46,25 @@ class LayananController extends Controller
         if($hasil){
             $res = 'ada';
             return response()->json(['msg' => $res]);
+        }
+    }
+    public function refreshCaptcha()
+    {
+        return captcha_img();
+    }
+    public function cekCaptcha(Request $request)
+    {
+        // $val = $this->validate($request, [
+        //     'captcha' => 'required|valid_captcha'
+        // ]);
+        $val = Validator::make($request->all(), [
+            'captcha' => 'required|captcha',
+        ]);
+        
+        if ($val->fails()) {
+            return response()->json(['msg'=> 'gagal']);
+        }else{
+            return response()->json(['msg'=> 'ok']);
         }
     }
     /**

@@ -23,6 +23,9 @@ Route::get('/pesan-sekarang','LayananController@index');
 Route::get('/json-kategori','LayananController@kategori');
 Route::get('/json-produk','LayananController@produk');
 Route::post('/cek-order','LayananController@cek');
+Route::get('/refresh_captcha','LayananController@refreshCaptcha');
+Route::post('/check_captcha','LayananController@cekCaptcha');
+
 
 Route::get('/contact-us', function () {return view('guest.contact-us');});
 Route::get('/kebijakan-layanan', function () {return view('guest.kebijakan-layanan');});

@@ -1,60 +1,25 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Jquery - input tags plugin example</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tagsinput/1.3.6/jquery.tagsinput.min.js"></script>
-</head>
-<body>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script type="text/javascript">
-$(document).ready(function() {
-	$("#gas").click(function(){
-	   setInterval(function () {
-            start();
-       }, 0); 
-	});
-});
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-function animasiKOnten(direction) {  
-    var batasAnimasi = $('.container').height() - $('.content').height()-100;
-    $('.content').animate({ "marginTop": (batasAnimasi)+ "px" }, 1000);
-}
-function down(){
-    animasiKOnten("down")
-}
-function start(){
- setTimeout(function () {
-    down();
- });
-}    
-	</script>
-
-<style type="text/css">
-	.container { height:250px; background:red; padding:0 10px; overflow:hidden; }
-.content { background:#eee; }
-</style>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<div class="container">
-    <div class="content">
-        <p>string1</p>
-        <p>string</p>
-        <p>string</p>
-        <p>string</p>
-        <p>string</p>
-        <p>string</p>
-        <p>string0</p>
-        <p>string1</p>
-        <p>string2</p>
-        <p>string3</p>
-        <p>string4</p>
-    </div>
-    <textarea name="" id="" cols="80" rows="10"></textarea>
-</div>
-<button id="gas">GAS</button>
-
-
-
-</body>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+     <div class="col-md-6">
+         
+     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
 </html>
+                

@@ -11,6 +11,9 @@
     <!-- <link rel="stylesheet" href="assets/css/flaticon.css"> -->
 @stop
 @section('script')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
     <!-- <script src="{{asset('CogencyPack/cogency/assets/js/jquery-3.3.1.min.js')}}"></script> -->
     <script src="{{asset('CogencyPack/cogency/assets/js/bootstrap-v4.1.3.min.js')}}"></script>
@@ -173,7 +176,6 @@
 
         <!-- start form style -->
         <div class="contact-form-wrap">
-            <form class="" action="#">
                 <div class="row">
                     <div class="container ml-4">
                         <div id="tujuan">
@@ -195,14 +197,14 @@
                         </div>
                     </div>
 
-                        <div class="col-xl-12 pt-50 pb-50">
-                            <div class="form-group">
-                            <label for="exampleInputEmail1">URL</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter URL">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                          </div>
-                        </div>
-                        
+                    <div class="col-xl-12 pt-50 pb-50">
+                        <div class="form-group">
+                        <label for="exampleInputEmail1">URL</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter URL">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                    </div>
+                    
                     </div>
 
                     <!-- Modal -->
@@ -230,7 +232,6 @@
                         <button class="btn-bg" id="next1" type="button">Next</button>
                     </div>
                 </div>
-            </form>
         </div>
         <!-- end form style -->
       
@@ -239,7 +240,6 @@
 
         <!-- start form style -->
         <div class="contact-form-wrap rmb-30">
-            <form class="form-style" action="#">
                 <div class="row">
                     
                     <div class="col-xl-12">
@@ -269,7 +269,6 @@
                         <button class="btn-bg" id="prev1" type="submit">Previous</button>
                     </div>
                 </div>
-            </form>
         </div>
         <!-- end form style -->
 
@@ -278,29 +277,17 @@
 
         <!-- start form style -->
         <div class="contact-form-wrap rmb-30">
-            <form class="form-style" action="#">
                 <div class="row">
+                    <div class="form-group">
+                        <div class="captcha">
+                             <span>{!! captcha_img() !!}</span>
+                             <button type="button" class="btn btn-success" id="refresh">Refresh</button>
+                             <button type="button" class="btn btn-primary" id="benerGak">Cek Bener Ga</button>
+                         </div>
+                         <input type="text" id="captcha" name="captcha" class="form-control">
+                    </div>
+
                     
-                    <div class="col-xl-6">
-                        <div class="your-name">
-                            <input type="text" placeholder="First Name*">
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="your-name">
-                            <input type="text" placeholder="Last Name*">
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="your-email">
-                            <input type="email" placeholder="Email*">
-                        </div>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="your-message">
-                            <textarea name="comments" cols="30" rows="10" placeholder="Message"></textarea>
-                        </div>
-                    </div>
                    <div class="col-xl-12">
                         <button class="btn-bg" id="next3" type="submit">Next</button>
                     </div>
@@ -309,7 +296,6 @@
                     </div>
 
                 </div>
-            </form>
         </div>
         <!-- end form style -->
 

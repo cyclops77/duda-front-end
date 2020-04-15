@@ -18,7 +18,7 @@
           $('#kategori').empty();
         $.each(data, function(index, kategoriObj){
         var layanan = (
-            '<div class="d-flex mx-auto">'+
+            '<div class="d-flex">'+
                 '<input type="radio" name="kategori"'+
                 ' id="kategori'+kategoriObj.id+'"'+
                 'class="custom-kn-radio check" '+
@@ -42,9 +42,30 @@
         '</div>'+
         '</div>'+
         '</div>');
-
+        var customOption = (
+                    '<div class="col-xl-12 logLayanan mt-4">'+
+                        '<div class="form-group">'+
+                        '<label for="exampleInputEmail1">Nama Layanan</label>'+
+                        '<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Layanan">'+
+                        '<small id="emailHelp" class="form-text text-muted"></small>'+
+                      '</div>'+
+                    '</div>'+
+                    '<div class="col-xl-12 logLayanan">'+
+                        '<div class="form-group">'+
+                        '<label for="exampleInputEmail1">Harga Layanan</label>'+
+                        '<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Harga Layanan">'+
+                        '<small id="emailHelp" class="form-text text-muted"></small>'+
+                      '</div>'+
+                    '</div>');
         console.log(ae);
         var id_kategori = ae.target.value;
+        if (id_kategori==3) {
+            if($(".logLayanan").length == 0){
+                $("#kategori").append(customOption);
+            }
+        }else if(id_kategori!=3){
+            $(".logLayanan").remove();
+        }
         
         $.get('/json-produk?kategori_id=' + id_kategori, function(data){
           $('#produk').empty();
@@ -71,3 +92,35 @@
         });
         });
     });
+$('#refresh').click(function(){
+    $.ajax({
+        type: 'GET',
+        url: '/refresh_captcha',
+        success: function(data){
+            $('.captcha span').html(data);
+        }
+    });    
+});
+$('#benerGak').click(function(){
+    var captcha = $('input[name=captcha]').val();
+    // alert('BISA');
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN' : $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        type: 'POST',
+        url: '/check_captcha',
+        data: {
+            "captcha": captcha 
+        },
+        success: function(data){
+            if (data.msg=="gagal"){
+                alert("GAGAL");
+            }else{
+                alert("Berhasil");
+            }
+        }
+    });
+}); 
