@@ -213,9 +213,9 @@ img {
     display: inline-block;
     font-size: 18px;
     font-weight: 600;
-    padding: 10px 16px 10px 16px;
-    /*min-width: 204px;*/
-    border-radius: 30px;
+    padding: 16px;
+    min-width: 204px;
+    border-radius: 108px;
     position: relative;
     cursor: pointer;
 }

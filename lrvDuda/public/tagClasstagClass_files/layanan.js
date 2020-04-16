@@ -124,9 +124,3 @@ $('#benerGak').click(function(){
         }
     });
 }); 
-
-
-
-
-
-

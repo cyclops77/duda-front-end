@@ -1,30 +1,30 @@
 @extends('guest.layout')
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/font-awesome.min.css')}}"> 
-    <!-- <link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/flaticon.css')}}"> -->
-    <link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/global.css')}}">
-    <link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/mainmenu.css')}}">
-    <link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('custom/custom.css')}}">
-    <!-- <link rel="stylesheet" href="assets/css/flaticon.css"> -->
+<link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/font-awesome.min.css')}}"> 
+<link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/global.css')}}">
+<link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/mainmenu.css')}}">
+<link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/style.css')}}">
+<link rel="stylesheet" href="{{asset('CogencyPack/cogency/assets/css/flaticon.css')}}">
+<link rel="stylesheet" href="{{asset('custom/custom.css')}}">
 @stop
 @section('script')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
-    <!-- <script src="{{asset('CogencyPack/cogency/assets/js/jquery-3.3.1.min.js')}}"></script> -->
-    <script src="{{asset('CogencyPack/cogency/assets/js/bootstrap-v4.1.3.min.js')}}"></script>
-    <script src="{{asset('CogencyPack/cogency/assets/js/jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{asset('CogencyPack/cogency/assets/js/smoothscroll.js')}}"></script>
-    <!-- <script src="{{asset('CogencyPack/cogency/assets/js/main.js')}}"></script> -->
-    <script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{asset('custom/validate.js')}}"></script>
-    <script src="{{asset('custom/layanan.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script type="text/javascript"></script>
+<script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+<script src="{{asset('CogencyPack/cogency/assets/js/bootstrap-v4.1.3.min.js')}}"></script>
+<script src="{{asset('CogencyPack/cogency/assets/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('CogencyPack/cogency/assets/js/smoothscroll.js')}}"></script>
+<script src="{{asset('Rogan/rogan-c/html/vendor/jquery.2.2.3.min.js')}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{asset('custom/validate.js')}}"></script>
+<script src="{{asset('custom/layanan.js')}}"></script>
+<script src="{{asset('custom/onTag.js')}}"></script>
 @stop
 
 
@@ -196,16 +196,18 @@
                         </div>
                         </div>
                     </div>
-
-                    <div class="col-xl-12 pt-50 pb-50">
-                        <div class="form-group">
-                        <label for="exampleInputEmail1">URL</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter URL">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                      </div>
-                    </div>
-                    
-                    </div>
+        
+        </div>
+        <div class="col-xl-12 pt-50" id="tagged">
+            <div class="form-group">
+            <label for="exampleInputEmail1">URL</label>
+            <div class="tag-container" id="inputan_field">
+            <input class="" id="inputan" /> 
+            
+          </div>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+        </div>
 
                     <!-- Modal -->
                     <div class="modal fade" id="alert-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -240,35 +242,34 @@
 
         <!-- start form style -->
         <div class="contact-form-wrap rmb-30">
-                <div class="row">
-                    
-                    <div class="col-xl-12">
-                        <div class="your-name">
-                            <input type="text" placeholder="KE 2*">
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <div class="col-xl-12">
-                        <div class="your-email">
-                            <input type="email" placeholder="Email*">
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <div class="col-xl-12">
-                        <div class="your-website">
-                            <input type="text" placeholder="Subject*">
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Nomor HP</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <div class="col-xl-12">
-                        <div class="your-message">
-                            <textarea name="comments" cols="30" rows="10" placeholder="Message"></textarea>
-                        </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Catatan</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-                    <div class="col-xl-12">
-                        <button class="btn-bg" id="next2" type="submit">Next</button>
-                    </div>
-                    <div class="col-xl-12">
+                    <div class="row">
+                    <div class="float-right">
                         <button class="btn-bg" id="prev1" type="submit">Previous</button>
                     </div>
-                </div>
+                    <div class="float-left ml-1">
+                        <button class="btn-bg " id="next2" type="submit">Next</button>
+                    </div>
+                    </div>
         </div>
         <!-- end form style -->
 
@@ -382,6 +383,61 @@
         </div>
     </div>
 </div>
+
+
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.tag-container {
+  /*border: 2px solid #ccc;*/
+  /*border-radius: 3px;*/
+  /*background: #fff;*/
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 6px;
+  /*overflow-x: scroll;*/
+  border: 1px solid rgba(255, 87, 132, 0.3);
+  border-radius: 10px;
+}
+.tag-container .tag {
+    background-color: #ffd5dd;
+    font-size: 10px;
+    width: auto;
+    text-align: center;
+    position: relative;
+    font-family: "Poppins",sans-serif;
+    color: red;
+    border-radius: 30px;
+  height: 30px;
+  margin: 5px;
+  padding: 5px 6px;
+  border-radius: 3px;
+  background-color: #ffd5dd;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+.tag i {
+  font-size: 16px;
+  color: #666;
+  margin-left: 5px;
+}
+.tag-container input {
+  padding: 5px;
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  font-family: 'Rubik';
+  color: #333;
+  flex: 1;
+}
+</style>
+<script type="text/javascript"> 
+
+
+</script>
 @stop
 
 @section('script')
