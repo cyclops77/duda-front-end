@@ -11,7 +11,7 @@ function createTag(label) {
   span.innerHTML = label;
   const closeIcon = document.createElement('i');
   closeIcon.innerHTML = 'close';
-  closeIcon.setAttribute('class', 'material-icons');
+  closeIcon.setAttribute('class', 'material-icons tag-icon');
   closeIcon.setAttribute('data-item', label);
   div.appendChild(span);
   div.appendChild(closeIcon);
@@ -43,7 +43,7 @@ input.addEventListener('keyup', (e) => {
 });
 document.addEventListener('click', (e) => {
   console.log(e.target.tagName);
-  if (e.target.tagName === 'I') {
+  if (e.target.className === 'tag-icon') {
     const tagLabel = e.target.getAttribute('data-item');
     const index = tags.indexOf(tagLabel);
     tags = [...tags.slice(0, index), ...tags.slice(index+1)];

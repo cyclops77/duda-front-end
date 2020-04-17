@@ -198,7 +198,8 @@
                     </div>
         
         </div>
-        <div class="col-xl-12 pt-50" id="tagged">
+        <div id="keyword" class="col-xl-12"></div>
+        <div class="col-xl-12" id="tagged">
             <div class="form-group">
             <label for="exampleInputEmail1">URL</label>
             <div class="tag-container" id="inputan_field">
