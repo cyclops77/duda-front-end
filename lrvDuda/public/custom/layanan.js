@@ -54,14 +54,14 @@
                     '<div class="col-xl-12 logLayanan mt-4">'+
                         '<div class="form-group">'+
                         '<label for="exampleInputEmail1">Nama Layanan</label>'+
-                        '<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Layanan">'+
+                        '<input type="email" class="form-control NamaLayanan" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Layanan">'+
                         '<small id="emailHelp" class="form-text text-muted"></small>'+
                       '</div>'+
                     '</div>'+
                     '<div class="col-xl-12 logLayanan">'+
                         '<div class="form-group">'+
                         '<label for="exampleInputEmail1">Harga Layanan</label>'+
-                        '<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Harga Layanan">'+
+                        '<input type="email" class="form-control HargaLayanan" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Harga Layanan">'+
                         '<small id="emailHelp" class="form-text text-muted"></small>'+
                       '</div>'+
                     '</div>');
@@ -137,4 +137,49 @@ $('#benerGak').click(function(){
 
 
 
+
+
+var code;
+function createCaptcha() {
+  //clear the contents of captcha div first 
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789amnopqrstuvwbcdefghijklxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  var lengthOtp = 6;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+    var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+    if (captcha.indexOf(charsArray[index]) == -1)
+      captcha.push(charsArray[index]);
+    else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 150;
+  canv.height = 70;
+  var ctx = canv.getContext("2d");
+  ctx.font = "40px Georgia";
+  ctx.strokeText(captcha.join(""), 0, 50);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+}
+function validateCaptcha() {
+  event.preventDefault();
+  debugger
+  if (document.getElementById("cpatchaTextBox").value == code) {
+    alert("Valid Captcha");
+    createCaptcha();
+  }else{
+    var errormsg = 'Warning';
+    var errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Produk Layanan Terlebih dahulu !!!'; 
+    $('#alert-modal').modal('show');
+    $('#modal-message').html(errormsg);
+    $('#error-body').html(errorbody);
+    createCaptcha();
+  }
+}
+$(document).ready(function(){
+    createCaptcha();
+});                            
 

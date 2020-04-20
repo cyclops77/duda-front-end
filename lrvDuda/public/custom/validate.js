@@ -4,6 +4,9 @@
      var layananX = $("input[name='layanan']:checked").val();
      var kategoriX = $("input[name='kategori']:checked").val();
      var produkX = $("input[name='produk']:checked").val();
+     var inputTag = $(".customHH").length;
+     var namaLayanan = $(".NamaLayanan");
+     var keyword = $("#keyword");
      var errormsg;
      var errorbody;
      var existsClass = $("#tujuan").hasClass("appended-produk");
@@ -14,34 +17,46 @@
         $('#modal-message').html(errormsg);
         $('#error-body').html(errorbody);
 
-     }else if(!kategoriX){
+     }else if(namaLayanan.length!=0 && !(namaLayanan.val())){
+        errormsg = 'Warning';
+        errorbody = 'Silahkan Isi Nama Layanan Terlebih Dahulu !!! '; 
+        $('#alert-modal').modal('show');
+        $('#modal-message').html(errormsg);
+        $('#error-body').html(errorbody);
+     }
+     else if (inputTag==0) {
+        errormsg = 'Warning';
+        errorbody = 'Silahkan Isi URL Terlebih Dahulu !!! '; 
+        $('#alert-modal').modal('show');
+        $('#modal-message').html(errormsg);
+        $('#error-body').html(errorbody);
+     }
+     // else if(keyword.leninputTaggth!=0 && !(keyword.val())){
+     //    errormsg = 'Warning';
+     //    errorbody = 'Silahkan Isi Keyword Terlebih Dahulu !!! '; 
+     //    $('#alert-modal').modal('show');
+     //    $('#modal-message').html(errormsg);
+     //    $('#error-body').html(errorbody);
+     // }
+     else if(!kategoriX){
         errormsg = 'Warning';
         errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Kategori Layanan Terlebih dahulu !!!'; 
         $('#alert-modal').modal('show');
         $('#modal-message').html(errormsg);
         $('#error-body').html(errorbody);
+     }else if ($("#appended-produk").length != 0 && !produkX) {
+        errormsg = 'Warning';
+        errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Produk Layanan Terlebih dahulu !!!'; 
+        $('#alert-modal').modal('show');
+        $('#modal-message').html(errormsg);
+        $('#error-body').html(errorbody);
      }else{
-        if ($("#appended-produk").length) {
-            if (!produkX) {
-                errormsg = 'Warning';
-                errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Produk Layanan Terlebih dahulu !!!'; 
-                $('#alert-modal').modal('show');
-                $('#modal-message').html(errormsg);
-                $('#error-body').html(errorbody);
-            }else{
-                $(".custom-redirect-2").addClass("active");
-                $(".custom-redirect-1").removeClass("active");
-                $(".custom-body-redirect-2").addClass(" show active");
-                $(".custom-body-redirect-1").removeClass(" show active");  
-            }
-         }else{
-            $(".custom-redirect-2").addClass("active");
-            $(".custom-redirect-1").removeClass("active");
-            $(".custom-body-redirect-2").addClass(" show active");
-            $(".custom-body-redirect-1").removeClass(" show active");  
-         }
-                                                      
-    }
+        $(".custom-redirect-2").addClass("active");
+        $(".custom-redirect-1").removeClass("active");
+        $(".custom-body-redirect-2").addClass(" show active");
+        $(".custom-body-redirect-1").removeClass(" show active");  
+     }
+    
   })      
             
         

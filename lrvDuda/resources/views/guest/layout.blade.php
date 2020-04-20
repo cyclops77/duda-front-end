@@ -75,7 +75,8 @@
 					  <li class="nav-item"><a href="{{url('/')}}" class="nav-link-custom" href="#home">Home</a></li>
 					  <li class="nav-item"><a href="{{url('about-us')}}" class="nav-link-custom" href="#home">About Us</a></li>
 					  <li class="nav-item"><a href="service1.html" class="nav-link-custom" href="#home">Services</a></li>
-					  <li class="nav-item"><a  class="nav-link-custom" href="#home">News</a></li>
+					  <li class="nav-item"><a  class="nav-link-custom" href="{{url('/news')}}">News</a></li>
+					  <li class="nav-item"><a  class="nav-link-custom" href="{{url('/contact-us')}}">Contact Us</a></li>
 					</ul>
 				  </div>
 				</div>
@@ -181,9 +182,13 @@
 								        </li>
 							        </ul>
 							    </li>
-						        <li class="nav-item dropdown">
-						            <a class="nav-link" href="#">News</a>
+						        <li class="nav-item">
+						            <a class="nav-link" href="{{url('/news')}}">News</a>
 								</li>
+								<li class="nav-item">
+						            <a class="nav-link" href="{{url('/contact-us')}}">Contact Us</a>
+								</li>
+
 								
 								<!-- <i class="flaticon-play-button"></i> -->
 								<li class="nav-item">
@@ -210,7 +215,7 @@
 									</div>
 									<!-- / dropdown -->
 								  </li>
-						        <li class="login-button"><a href="">Contact Us</a></li>
+						        <li class="login-button"><a href="{{url('/pesan-sekarang')}}">Pesan Sekarang</a></li>
 						   </ul>
 					   </div>
 					</div>

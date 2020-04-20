@@ -29,8 +29,10 @@ function clearTags() {
   });
 }
 document.addEventListener('click', (e) => {
-  console.log(e.target.tagName);
-  if (e.target.className === 'tag-icon') {
+  // alert(e.target.className);
+  // console.log(e.target.tagName);
+  if (e.target.className === 'material-icons tag-icon') {
+    // alert('aaa');
     const tagLabel = e.target.getAttribute('data-item');
     const index = tags.indexOf(tagLabel);
     // alert();
@@ -74,7 +76,7 @@ input.addEventListener('keyup', (e) => {
           var slg = bfr.replace(/\s/g,"-");
             // var slugged = 
             $("#tagged").append(
-              '<div class="op"><input style="display: none" type="text" value="'+input.value+'" id="'+slg+'" class="form-control customHH"></div>');
+              '<div class="op"><input style="display: none" type="text" value="'+input.value+'" id="'+slg+'" class="form-control customHH" name="customHH"></div>');
             e.target.value.split(',').forEach(tag => {
             tags.push(tag);  
            });

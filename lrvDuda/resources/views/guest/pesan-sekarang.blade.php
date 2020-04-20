@@ -141,6 +141,26 @@
 </div>
 <section class="contact-page-section pt-70 pb-100 rpb-50">
 <div class="container">
+    <div class="modal fade" id="alert-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="modal-message">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="alert alert-warning" id="error-body">
+                                
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-light border-secondary" data-dismiss="modal">Oke</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
     <div class="row">
         <div class="col-lg-8">
             <div class="row">
@@ -169,10 +189,7 @@
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <!-- INI DIA -->
-                            <div class="tab-pane fade custom-body-redirect-1 show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
-    <style type="text/css">
-        
-    </style>
+                            <div class="tab-pane fade custom-body-redirect-1  show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one-tab">
 
         <!-- start form style -->
         <div class="contact-form-wrap">
@@ -204,99 +221,186 @@
             <label for="exampleInputEmail1">URL</label>
             <div class="tag-container" id="inputan_field">
             <input class="" id="inputan" /> 
-            
           </div>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
         </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="alert-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="modal-message">Modal title</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="alert alert-warning" id="error-body">
-                                
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-light border-secondary" data-dismiss="modal">Oke</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-xl-12 nav-item" id="pills-tab" role="tablist">
-                        <button class="btn-bg" id="next1" type="button">Next</button>
-                    </div>
-                </div>
+            <div class="col-xl-12 text-right mt-4">
+                <button class="btn-bg" id="next1" type="button">Next</button>
+            </div>
         </div>
-        <!-- end form style -->
-      
+        </div>
     </div>
     <div class="tab-pane fade custom-body-redirect-2" id="tab-two" role="tabpanel" aria-labelledby="tab-two-tab">
-
         <!-- start form style -->
         <div class="contact-form-wrap rmb-30">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="text" class="form-control border-bg-d" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control border-bg-d" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nomor HP</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <input type="email" class="form-control border-bg-d" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Catatan</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <textarea class="form-control border-bg-d" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                     </div>
-                    <div class="row">
-                    <div class="float-right">
-                        <button class="btn-bg" id="prev1" type="submit">Previous</button>
-                    </div>
-                    <div class="float-left ml-1">
-                        <button class="btn-bg " id="next2" type="submit">Next</button>
-                    </div>
+                    <div class="row d-flex justify-content-between">
+                        <div class="ml-3">
+                            <button class="btn-bg" id="prev1" type="submit">Previous</button>
+                        </div>
+                        <div class="mr-3">
+                            <button class="btn-bg " id="next2" type="submit">Next</button>
+                        </div>
                     </div>
         </div>
         <!-- end form style -->
 
     </div>
-    <div class="tab-pane fade custom-redirect" id="tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
+    <div class="tab-pane fade custom-redirect-3" id="tab-three" role="tabpanel" aria-labelledby="tab-three-tab">
 
         <!-- start form style -->
         <div class="contact-form-wrap rmb-30">
-                <div class="row">
-                    <div class="form-group">
-                        <div class="captcha">
-                             <span>{!! captcha_img() !!}</span>
-                             <button type="button" class="btn btn-success" id="refresh">Refresh</button>
-                             <button type="button" class="btn btn-primary" id="benerGak">Cek Bener Ga</button>
-                         </div>
-                         <input type="text" id="captcha" name="captcha" class="form-control">
-                    </div>
+            <div class="row align-items-center ">
+                <div class="col-lg-12 m-xl-auto">
+                    <div class="order-confirm-sheet  p-3">
+                        <div class="order-review pl-3 pr-3">
+                        <h2 class="main-title text-center mt-2">Checkout</h2>
+                        <div class="">     
+                            <div class="mt-5">
+                                <div class="row justify-content-between">
+                                    <h5>
+                                      Bluetooth Speaker
+                                    </h5>
+                                    <p class=" text-right ">
+                                      $ 123.342
+                                    </p>
+                                </div>
+                            </div>  
+                            <div class="mt-1">
+                                <div class="row justify-content-between">
+                                    <h5>
+                                      Bluetooth Speaker
+                                    </h5>
+                                    <p class=" text-right ">
+                                      $ 123.342
+                                    </p>
+                                </div>
+                            </div>        
+                            <div class="mt-1">
+                                <div class="row justify-content-between">
+                                    <h5>
+                                      Bluetooth Speaker
+                                    </h5>
+                                    <p class=" text-right ">
+                                      $ 123.342
+                                    </p>
+                                </div>
+                            </div>  
+                            <hr>
+                            <div class="mt-1">
+                                <div class="row justify-content-between">
+                                    <h5>
+                                      Total
+                                    </h5>
+                                    <h3 class=" text-right ">
+                                      $ 123.342
+                                    </h3>
+                                </div>
+                            </div> 
+                            <style>
+                                .cc{
+                                    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.01),0 4px 15px 0 rgba(0,0,0,0.09) !important;
+                                    /* border-radius: 5px; */
+                                }
+                                .ff{
+                                    width: 125px; object-fit: cover;
+                                    /*height: 45px;*/
+                                }
+                            </style>
+                            <div class="pt-4">
+                                <div class="row justify-content-between">
+                                    <div class="card cc col-3">
+                                      <div class="row">
+                                      <img class="card-img-top w-75 mx-auto pt-4 ff" src="{{asset('bri-logo.png')}}" alt="Card image cap">
+                                      </div>
+                                      <div class="card-body pt-3">
+                                        <h6 class="text-center">Bank BRI</h6>
+                                        <h6 class="card-text text-center text-muted pt-2">123456789</h6>
+                                        <h6 class="card-text text-center text-muted">Arya Surya</>
+                                      </div>
+                                    </div>
+                                    <div class="card cc col-3">
+                                    <div class="row">
+                                      <img class="card-img-top w-75 mx-auto pt-4 ff" src="{{asset('bca-logo.png')}}" alt="Card image cap">
+                                    </div>
+                                      <div class="card-body  pt-3">
+                                        <h6 class="text-center">Bank BCA</h6>
+                                        <h6 class="card-text text-center text-muted pt-2">123456789</h6>
+                                        <h6 class="card-text text-center text-muted">Arya Surya</>
+                                      </div>
+                                    </div>
+                                    <div class="card cc col-3">
+                                        <div class="row">
+                                          <img class="card-img-top mx-auto pt-4 ff" src="{{asset('mandiri-logo.png')}}" alt="Card image cap" style="">
+                                        </div>
+                                      <div class="card-body  pt-3">
+                                        <h6 class="text-center">Bank Mandiri</h6>
+                                        <h6 class="card-text text-center text-muted pt-2">123456789</h6>
+                                        <h6 class="card-text text-center text-muted">Arya Surya</>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-1">
+                                <div class="row justify-content-between">
+                                    <p class="policy-text">Your personal data will be use for your order, support your experience through this website & for other purpose described in our privacy policy</p>
+                            <div class="agreement-checkbox">
+                                <input type="checkbox" id="agreement" class="custom-checkbox">
+                                <label for="agreement">I have read and agree to the website terms and conditions*</label>
+                            </div>
+                                </div>
+                            </div> 
+                           <div class="row justify-content-start mt-4">
+                               
+                            <!-- <p class="col-12">Captcha</p> -->
+                            <div class="col-12" style="border: 1px solid rgba(0, 0, 0, 0.1); padding: 10px">
+                                <div id="captcha"></div>
+                            </div>
 
-                    
-                   <div class="col-xl-12">
-                        <button class="btn-bg" id="next3" type="submit">Next</button>
+                           <div class="row justify-content-start mt-2 ">
+                           <div class="form-group mt-2 col-12">
+                               <input type="text" id="cpatchaTextBox" class="form-control col-12" aria-describedby="emailHelp" placeholder="Masukkan Captcha" id="cpatchaTextBox"/>
+                            </div>         
+                           </div>
+                        </div>
+                        <div class="row">
+                            
+                            
+                            <!-- <button type="submit" onclick="validateCaptcha()">Submit</button> -->
+                        
+                        </div>
+                     </div>
+                    </div> <!-- /.order-confirm-sheet -->
+                </div>
+            </div>
+        </div>
+               <div class="row d-flex justify-content-between">
+                    <div class="ml-3">
+                        <button class="btn-bg" id="prev1" type="submit">Previous</button>
                     </div>
-                    <div class="col-xl-12">
-                        <button class="btn-bg" id="prev2" type="submit">Previous</button>
+                    <div class="mr-3">
+                        <button class="btn-bg " id="next2" type="submit">Selesai</button>
                     </div>
-
                 </div>
         </div>
         <!-- end form style -->
