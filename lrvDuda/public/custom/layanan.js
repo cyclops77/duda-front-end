@@ -1,7 +1,7 @@
 
  
     $('input:radio[name="layanan"]').on('change',function(e){
-        var keywordForm = ('<div class="form-group" id="form-keyword"><label for="keyword">Input Keyword</label><input type="email" class="form-control border-bg-d" id="keyword" aria-describedby="emailHelp" placeholder="Enter email"><small id="emailHelp" class="form-text text-muted">Well never share your email with anyone else.</small></div>');
+        var keywordForm = ('<div class="form-group" id="form-keyword"><label for="keyword">Input Keyword</label><input class="form-control border-bg-d InputKeyword" id="keyword" aria-describedby="emailHelp" placeholder="Enter email"><small id="emailHelp" class="form-text text-muted">Well never share your email with anyone else.</small></div>');
         var kategoriButton = ('<div id="appended" class="form-group your-name">'+
         '<div class="col-xl-12 row pt-25 pb-50 custom-ln-border">'+
             '<h3 class="text-center text-custom mb-3">Silahkan Pilih Kategori Layanan</h3>'+

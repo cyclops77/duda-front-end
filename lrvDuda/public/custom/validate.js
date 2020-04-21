@@ -6,7 +6,8 @@
      var produkX = $("input[name='produk']:checked").val();
      var inputTag = $(".customHH").length;
      var namaLayanan = $(".NamaLayanan");
-     var keyword = $("#keyword");
+     var hargaLayanan = $(".HargaLayanan");
+     var KeyWord = $(".InputKeyword");
      var errormsg;
      var errorbody;
      var existsClass = $("#tujuan").hasClass("appended-produk");
@@ -23,6 +24,19 @@
         $('#alert-modal').modal('show');
         $('#modal-message').html(errormsg);
         $('#error-body').html(errorbody);
+     }else if(hargaLayanan.length!=0 && !(hargaLayanan.val())){
+        errormsg = 'Warning';
+        errorbody = 'Silahkan Isi Harga Layanan Terlebih Dahulu !!! '; 
+        $('#alert-modal').modal('show');
+        $('#modal-message').html(errormsg);
+        $('#error-body').html(errorbody);
+     }
+     else if(KeyWord.length!=0 && !(KeyWord.val())){
+        errormsg = 'Warning';
+        errorbody = 'Silahkan Isi Keyword Terlebih Dahulu !!! '; 
+        $('#alert-modal').modal('show');
+        $('#modal-message').html(errormsg);
+        $('#error-body').html(errorbody);
      }
      else if (inputTag==0) {
         errormsg = 'Warning';
@@ -31,13 +45,6 @@
         $('#modal-message').html(errormsg);
         $('#error-body').html(errorbody);
      }
-     // else if(keyword.leninputTaggth!=0 && !(keyword.val())){
-     //    errormsg = 'Warning';
-     //    errorbody = 'Silahkan Isi Keyword Terlebih Dahulu !!! '; 
-     //    $('#alert-modal').modal('show');
-     //    $('#modal-message').html(errormsg);
-     //    $('#error-body').html(errorbody);
-     // }
      else if(!kategoriX){
         errormsg = 'Warning';
         errorbody = 'Anda tidak dapat melanjutkan ke Project Proposal, silahkan pilih Kategori Layanan Terlebih dahulu !!!'; 
