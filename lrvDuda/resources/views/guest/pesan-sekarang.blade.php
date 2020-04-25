@@ -278,7 +278,7 @@
                         <div class="">     
                             <div class="mt-5">
                                 <div class="row justify-content-between">
-                                    <h5>
+                                    <h5 id="txt_layanan">
                                       Bluetooth Speaker
                                     </h5>
                                     <p class=" text-right ">
@@ -288,7 +288,7 @@
                             </div>  
                             <div class="mt-1">
                                 <div class="row justify-content-between">
-                                    <h5>
+                                    <h5 id="txt_kat_layanan">
                                       Bluetooth Speaker
                                     </h5>
                                     <p class=" text-right ">

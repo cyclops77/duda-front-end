@@ -22,6 +22,15 @@
         if (id_layanan && $("#appended").length == 0) {
             $('#tujuan').append(kategoriButton);
         }
+
+        // SHOW NAME 
+        $.get('/has-selected-layanan?layanan_id=' + id_layanan, function(data){
+            $.each(data, function(i, res){
+                $("#txt_layanan").text(res.name);
+            });
+        });
+
+         // SHOW NAME 
         $.get('/json-kategori?layanan_id=' + id_layanan, function(data){
           $('#kategori').empty();
         $.each(data, function(index, kategoriObj){
@@ -67,6 +76,11 @@
                     '</div>');
         console.log(ae);
         var id_kategori = ae.target.value;
+        $.get('/has-selected-category?kategori_id=' + id_kategori, function(data){
+            $.each(data, function(i, res){
+                $("#txt_kat_layanan").text(res.name);
+            });
+        });
         if (id_kategori==3) {
             if($(".logLayanan").length == 0){
                 $("#kategori").append(customOption);

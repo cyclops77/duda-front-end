@@ -15,6 +15,16 @@ class LayananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function selectedLayanan(Request $request)
+    {
+        $layanan = Layanan::whereId($request->layanan_id)->get();
+        return response()->json($layanan);
+    }
+    public function selectedCategory(Request $request)
+    {
+        $kategori = Kategori_layanan::whereId($request->kategori_id)->get();
+        return response()->json($kategori);
+    }
     public function index()
     {
         $layanan = Layanan::All();
@@ -45,7 +55,13 @@ class LayananController extends Controller
         $hasil = Layanan::whereId($request->id)->first();
         if($hasil){
             $res = 'ada';
-            return response()->json(['msg' => $res]);
+            $name = $hasil->name;
+            $id = $hasil->id;
+            return response()->json([
+                'msg' => $res,
+                'name' => $name,
+                'id' => $id,
+            ]);
         }
     }
     public function refreshCaptcha()

@@ -104,7 +104,7 @@
   </div>
 </div>
 <div class="container col-md-10 mt-5" id="formInputan" style="">
-	<div class="card-custom">
+	<div class="card">
 		<h3 class="text-center mb-2 mt-5">
 			*Informasi tentang order anda juga sudah kami kirimkan melalui e-mail yang anda isikan saat melakukan pemesanan
 		</h3>
@@ -139,7 +139,7 @@
 		      </div>
 		      <div class="flex"></div>
 		      <div class="text-right">
-		      	<h3 class="mr-3">www.duda.co.id</h3>
+		      	<h3 class="mr-3" id="contohTarget">www.duda.co.id</h3>
 		        <div class="text-md"></div>
 		      </div>
 		    </div>

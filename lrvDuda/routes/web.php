@@ -19,6 +19,8 @@ Route::get('/service-three', function () {return view('guest.service-three');});
 Route::get('/news', function () {return view('guest.news');});
 // Route::get('/pesan-sekarang', function () {return view('guest.pesan-sekarang');});
 
+Route::get('/has-selected-layanan','LayananController@selectedLayanan');
+Route::get('/has-selected-category','LayananController@selectedCategory');
 Route::get('/pesan-sekarang','LayananController@index');
 Route::get('/json-kategori','LayananController@kategori');
 Route::get('/json-produk','LayananController@produk');
